@@ -3,7 +3,7 @@
 
 <head>
 
-    <script>
+        <script>
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
     v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
@@ -17,27 +17,23 @@
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             visitor: {
-                id: user_id,
-                firstName: first_name,
-                lastName: last_name,
-                email: user_email,
-                permissionLevel: user_permissions,
-                role: user_role
+                id:              'VISITOR-UNIQUE-ID'   // Required if user is logged in, default creates anonymous ID
+                //email:        // Recommended if using Pendo Feedback, or NPS Email
+                // full_name:    // Recommended if using Pendo Feedback
+                // role:         // Optional
 
                 // You can add any additional visitor level key-values here,
                 // as long as it's not one of the above reserved names.
             },
 
             account: {
-                id: account_id,
-                name: accont_name,
-                industry: account_industry,
-                creationDate: creation_date,
-                contractStartDate: start_date,
-                renewalDate: renewal_date,
-                contractValue: contract_value,
-              
-                
+                id:           'ACCOUNT-UNIQUE-ID' // Required if using Pendo Feedback, default uses the value 'ACCOUNT-UNIQUE-ID'
+                // name:         // Optional
+                // is_paying:    // Recommended if using Pendo Feedback
+                // monthly_value:// Recommended if using Pendo Feedback
+                // planLevel:    // Optional
+                // planPrice:    // Optional
+                // creationDate: // Optional
 
                 // You can add any additional account level key-values here,
                 // as long as it's not one of the above reserved names.
